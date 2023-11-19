@@ -1,15 +1,17 @@
+import alura.screenmatch.modelos.Filme;
+
 public class Principal {
     public static void main(String[] args){
 
         Filme meuFilme = new Filme();
-        meuFilme.nome = "O poderoso chefão";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.somaDasAvaliacoes = 9;
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
 
-        meuFilme.exibeFichaTecnica();
-        meuFilme.avalia(8);
+        meuFilme.avalia(10);
         meuFilme.avalia(10);
         meuFilme.avalia(5);
+        System.out.println("Total de avaliações é: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println("A média é: " + meuFilme.retornaMedia());
+
     }
 }
